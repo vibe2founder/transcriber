@@ -1,0 +1,22 @@
+{
+  "name": "whisper-ts-wrapper",
+  "version": "1.0.0",
+  "description": "TypeScript wrapper for OpenAI Whisper CLI",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "whisper",
+    "asr",
+    "typescript",
+    "wrapper"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
