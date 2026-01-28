@@ -22,23 +22,6 @@ const result = await transcribe({
 console.log(result.text);
 ```
 
-## CLI
-
-Run the CLI after building the package:
-
-```bash
-ts-whisper audio.mp3 --file transcript.md
-```
-
-### CLI options
-
-- `--file`: Write transcript text to a file instead of stdout.
-- `--model`: Override the model file path.
-- `--language`: Set the input language code (e.g. `pt`, `en`).
-- `--threads`: Set the number of CPU threads.
-- `--translate`: Translate speech to English.
-- `--binary`: Override the whisper.cpp binary path.
-
 ## Options
 
 - `modelPath`: Override the model file path. Defaults to `models/ggml-base.bin`.
