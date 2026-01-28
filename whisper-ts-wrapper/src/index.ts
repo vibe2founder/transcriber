@@ -108,7 +108,7 @@ export const transcribe = async (options: TranscribeOptions): Promise<Transcribe
                                 segments: data.segments.map((s: any) => ({
                                     start: s.start,
                                     end: s.end,
-                                    text: s.text.trim()
+                                    text: s.text
                                 }))
                             };
                             resolve(result);
