@@ -12,6 +12,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
+  "bin": {
+    "ts-whisper": "dist/cli.js"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.0",
