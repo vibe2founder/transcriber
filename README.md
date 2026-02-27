@@ -1,18 +1,18 @@
-# whisper-cpp-ts
+# 👨‍💻 Transcriber
 
-`whisper-cpp-ts` is a TypeScript library that wraps the `whisper.cpp` CLI so you can run local speech-to-text transcription from Node.js.
+`transcriber` é uma biblioteca TypeScript que encapsula a CLI do `whisper.cpp` para permitir transcrição de fala para texto localmente a partir do Node.js.
 
-## Requirements
+## 📝 Requisitos
 
-- A compiled `whisper.cpp` binary placed at `bin/whisper` (or `bin/whisper.exe` on Windows).
-- A model file such as `ggml-base.bin` placed at `models/ggml-base.bin`.
+- Um binário `whisper.cpp` compilado em `bin/whisper` (ou `bin/whisper.exe` no Windows)
+- Um arquivo de modelo como `ggml-base.bin` em `models/ggml-base.bin`
 
-You can download models from the official `whisper.cpp` releases or build them following the instructions in the upstream repository.
+Você pode baixar modelos dos releases oficiais do `whisper.cpp` ou compilá-los seguindo as instruções no repositório upstream.
 
-## Usage
+## 🙋🏻‍♂️ Uso
 
 ```ts
-import { transcribe } from "ts-whisper";
+import { transcribe } from "transcriber";
 
 const result = await transcribe({
   file: "audio.wav",
@@ -22,17 +22,17 @@ const result = await transcribe({
 console.log(result.text);
 ```
 
-## Options
+## 📑 Opções
 
-- `modelPath`: Override the model file path. Defaults to `models/ggml-base.bin`.
-- `threads`: Set the number of CPU threads to use with `whisper.cpp`.
-- `translate`: When true, `whisper.cpp` will translate speech to English.
+- `modelPath`: Substitui o caminho do arquivo de modelo. Padrão: `models/ggml-base.bin`
+- `threads`: Define o número de threads de CPU para usar com o `whisper.cpp`
+- `translate`: Quando true, o `whisper.cpp` traduzirá a fala para inglês
 
-## Binary and model helpers
+## 🛠️ Helpers para binário e modelo
 
-- `checkWhisperBinary()` verifies the binary exists and returns the resolved path.
-- `checkModel()` verifies the model exists and returns the resolved path.
+- `checkWhisperBinary()` verifica se o binário existe e retorna o caminho resolvido
+- `checkModel()` verifica se o modelo existe e retorna o caminho resolvido
 
-## Notes
+## 📋 Notas
 
-This library only orchestrates the `whisper.cpp` CLI and does not reimplement any Whisper inference.
+Esta biblioteca apenas orquestra a CLI do `whisper.cpp` e não reimplementa nenhuma inferência do Whisper.
